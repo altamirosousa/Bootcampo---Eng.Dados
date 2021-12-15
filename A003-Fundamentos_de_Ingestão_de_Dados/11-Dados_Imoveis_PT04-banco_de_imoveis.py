@@ -42,7 +42,7 @@ houses
 
 #%%
 df = pd.DataFrame(
-    columns = [
+    columns=[
         'descricao',
         'endereco',
         'area',
@@ -67,35 +67,43 @@ while qtd_imoveis > df.shape[0]:
         'a', {'class': 'property-card__content-link js-card-title'})
     for house in houses:
         try:
-            descricao = houses.find('span', {'class': 'property-card__title'}).text.strip()
+            descricao = houses.find(
+                'span', {'class': 'property-card__title'}).text.strip()
         except:
             descricao = None
         try:
-            endereco = houses.find('span', {'class': 'property-card__address'}).text.strip()
+            endereco = houses.find(
+                'span', {'class': 'property-card__address'}).text.strip()
         except:
             endereco = None
         try:
-            area = houses.find('span', {'class': 'js-property-card-detail-area'}).text.strip()
+            area = houses.find(
+                'span', {'class': 'js-property-card-detail-area'}).text.strip()
         except:
             area = None
         try:
-            quartos = houses.find('li', {'class': 'property-card__detail-room'}).text.strip()
+            quartos = houses.find(
+                'li', {'class': 'property-card__detail-room'}).text.strip()
         except:
             quartos = None
         try:
-            wc = houses.find('li', {'class': 'property-card__detail-bathroom'}).text.strip()
+            wc = houses.find(
+                'li', {'class': 'property-card__detail-bathroom'}).text.strip()
         except:
             wc = None
         try:
-            vagas = houses.find('li', {'class': 'property-card__detail-garage'}).text.strip()
+            vagas = houses.find(
+                'li', {'class': 'property-card__detail-garage'}).text.strip()
         except:
             vagas = None
         try:
-            valor = houses.find('div', {'class': 'property-card__price'}).text.strip()
+            valor = houses.find(
+                'div', {'class': 'property-card__price'}).text.strip()
         except:
             valor = None
         try:
-            condominio = houses.find('div', {'class': 'property-card__price-details--condo'}).text.strip()
+            condominio = houses.find(
+                'div', {'class': 'property-card__price-details--condo'}).text.strip()
         except:
             condominio = None
         try:
