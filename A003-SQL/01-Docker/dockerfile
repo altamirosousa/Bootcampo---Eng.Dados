@@ -1,9 +1,12 @@
+## ----------- PRÉ-REQUISITOS -----------
+## DOCKER - https://docs.docker.com/desktop/windows/install/
+
 FROM httpd
 COPY ./web/ /usr/local/apache2/htdocs/
 EXPOSE 80
 
 ## ----------- COMANDOS -----------
-## POSICIONA PASTA           - cd A003-SQL
+## POSICIONA PASTA           - cd A003-SQL/01-Docker
 ## CONSTRUIR IMAGEM          - docker build -t web_apache .
 ## EXECUTA DOCKER            - docker run -d -p 80:80 web_apache
 ## VERIFICA SERVIÇOS RODANDO - docker ps
