@@ -4,19 +4,21 @@
 version: "3"
 services:
   db:
-    image: postgres
+    image: "postgres:buster"
     container_name: "pg_container"
     environment:
-        - POSTGRESS_USER=root
-        - POSTGRESS_PASSWORD=root
-        - POSTGRESS_DB=postgres
+        - POSTGRES_USER=root
+        - POSTGRES_PASSWORD=root
+        - POSTGRES_DB=test_db
     ports:
-        - "5432:5432"
+        - "55432:5432"
     volumes:
-        - ".db:/var/lib/postgressql/data/"
-
+        - "/mnt/C/Users/altamiro.sousa/OneDrive/PARTICULAR/Cursos/Bootcampo - Eng.Dados/A003-SQL/02-Docker_Compose/db:/var/lib/postgresql/data/"
+        
 ## ----------- COMANDOS -----------
 ## POSICIONA PASTA        - cd A003-SQL\02-Docker_Compose
-## SUBIR SERVIÇOS         - docker-compose up db
-
+## SUBIR SERVIÇOS         - docker-compose up db (modo console)
+##                        - docker-compose -d up db (modo "serviço")
+## PARA SERVIÇOS          - docker-compose down
+## VERIFICAR SERVIÇOS     - docker-compose ps
 
